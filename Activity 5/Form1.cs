@@ -22,7 +22,6 @@ namespace Activity_5
         {
             OpenFileDialog openFile = new OpenFileDialog();
             StreamReader inputFile;
-            string fileData;
 
             if (openFile.ShowDialog() == DialogResult.OK)
             {
@@ -32,13 +31,46 @@ namespace Activity_5
                 // Loop to read entire file
                 while(!inputFile.EndOfStream)
                 {
+                    // String to hold all file data
+                    string fileData = inputFile.ReadToEnd();
+                    
+                    // Part A: Convert all words to lowercase //
+
                     // Hold lower case data from file
                     string lowerCase;
-                    fileData = inputFile.ReadToEnd();
                     // Convert fileData to lower case
                     lowerCase = fileData.ToLower();
 
-                    tbx_display_file.Text = fileData;
+                    // Part B: Find first and last words alphabetically //
+
+                    // Create an array for each individual word
+                    string[] wordArray = fileData.Split(' ', ',', '.', '\n');
+                    // Sort all words alphabetically
+                    Array.Sort(wordArray);
+                    // Use Join() method to concatenate array into single string, store in new string variable
+                    string alphabetized = String.Join(" ", wordArray);
+
+                    // Part C: Find the longest worrd //
+
+                    string longestWord = "";
+                    int ctr = 0;
+
+                    foreach (string s in wordArray)
+                    {
+                        if (s.Length > ctr)
+                        {
+                            longestWord = s;
+                            ctr = s.Length;
+                        }
+                    }
+
+                    tbx_display_file.Text = longestWord;
+
+                    //tbx_display_file.Text = fileData;
+
+                    // Display all to textbox
+                    //tbx_display_file.Text = "All lower case: " + lowerCase + "\r\nAlphabetized: " + alphabetized;
+                    
                 }
 
             }

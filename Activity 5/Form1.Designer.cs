@@ -44,10 +44,10 @@
             // 
             // tbx_display_file
             // 
-            this.tbx_display_file.Location = new System.Drawing.Point(277, 230);
+            this.tbx_display_file.Location = new System.Drawing.Point(219, 202);
             this.tbx_display_file.Multiline = true;
             this.tbx_display_file.Name = "tbx_display_file";
-            this.tbx_display_file.Size = new System.Drawing.Size(234, 90);
+            this.tbx_display_file.Size = new System.Drawing.Size(402, 192);
             this.tbx_display_file.TabIndex = 1;
             // 
             // Form1
