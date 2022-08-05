@@ -51,8 +51,11 @@ namespace Activity_5
                     string[] wordArray = fileData.Split(' ', ',', '.', '\n');
                     // Sort all words alphabetically
                     Array.Sort(wordArray);
-                    // Use Join() method to concatenate array into single string, store in new string variable
-                    string alphabetized = String.Join(" ", wordArray);
+
+                    // Hold first alphabetical string
+                    string firstAlph = wordArray[0];
+                    // Hold last alphabetical string
+                    string lastAlph = wordArray[wordArray.Length - 1];
 
                     /* Part C: Find the longest word */
 
@@ -90,7 +93,7 @@ namespace Activity_5
                         // Loop through the length of each individual string
                         for (int k = 0; k < word.Length; k++)
                         {
-                            // Check each string for lowecase and capital vowels
+                            // Check each string for lowercase and capital vowels
                             if ((word[k] == 'a' || word[k] == 'e' || word[k] == 'i' || word[k] == 'o' || word[k] == 'u') || 
                                 (word[k] == 'A' || word[k] == 'E' || word[k] == 'I' || word[k] == 'O' || word[k] == 'U'))
                             {
@@ -109,8 +112,8 @@ namespace Activity_5
 
 
                     // Display all to textbox
-                    tbx_display_file.Text = "All lower case: " + lowerCase + "\r\nAlphabetized: " + alphabetized + "\r\nLongest word: "
-                    + longestWord + "\r\nMost Vowels: " + mostVowels;
+                    tbx_display_file.Text = "All lower case: " + lowerCase + "\r\nFirst word alphabetically: " + firstAlph + "\r\nLast word alphabetically: " + lastAlph
+                    + "\r\nLongest word: " + longestWord + "\r\nMost Vowels: " + mostVowels;
 
                     // Store text from textbox into outputData
                     outputData = tbx_display_file.Text;
