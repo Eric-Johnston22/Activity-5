@@ -1,6 +1,6 @@
 ﻿namespace Activity_5
 {
-    partial class Form1
+    partial class form_file_read_write
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,7 @@
             // 
             // btn_read
             // 
-            this.btn_read.Location = new System.Drawing.Point(219, 173);
+            this.btn_read.Location = new System.Drawing.Point(371, 173);
             this.btn_read.Name = "btn_read";
             this.btn_read.Size = new System.Drawing.Size(75, 23);
             this.btn_read.TabIndex = 0;
@@ -44,21 +44,23 @@
             // 
             // tbx_display_file
             // 
-            this.tbx_display_file.Location = new System.Drawing.Point(219, 202);
+            this.tbx_display_file.Location = new System.Drawing.Point(180, 202);
             this.tbx_display_file.Multiline = true;
             this.tbx_display_file.Name = "tbx_display_file";
-            this.tbx_display_file.Size = new System.Drawing.Size(402, 192);
+            this.tbx_display_file.Size = new System.Drawing.Size(454, 146);
             this.tbx_display_file.TabIndex = 1;
             // 
-            // Form1
+            // form_file_read_write
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tbx_display_file);
             this.Controls.Add(this.btn_read);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Name = "form_file_read_write";
+            this.Text = "Read and write";
             this.ResumeLayout(false);
             this.PerformLayout();
 
